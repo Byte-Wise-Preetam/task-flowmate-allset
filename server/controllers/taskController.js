@@ -3,7 +3,7 @@ const Task = require("../models/task");
 const User = require("../models/user");
 const cloudinary = require('cloudinary').v2;
 
-// Parent route     >>>     /api/tasks/
+// Parent route     >>>>     /api/tasks/
 
 // create a new task    /tasks/  POST
 const createNewTask = async function(req, res, next){

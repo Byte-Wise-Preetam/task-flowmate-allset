@@ -1,0 +1,10 @@
+client/
+
+server/node_modules/
+
+server/.env
+
+server/src-latest-assets-done.zip
+
+server/.gitignore
+

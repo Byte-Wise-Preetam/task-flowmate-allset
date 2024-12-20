@@ -1,4 +1,12 @@
-client/
+client/node_modules/
+
+client/.env
+
+client/src.zip
+
+client/src-slice-fix.zip
+
+client/src/pages/WelcomeText.jsx
 
 server/node_modules/
 

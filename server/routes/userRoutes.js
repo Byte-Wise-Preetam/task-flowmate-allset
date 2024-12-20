@@ -1,5 +1,5 @@
 const express = require("express");
-const { registerUser, loginUser, logoutUser, changePassword, addMember, editMember, getTeam, removeMember } = require("../controllers/userController");
+const { registerUser, loginUser, logoutUser, changePassword, addMember, editMember, getTeam, removeMember, checkTokenExpiry } = require("../controllers/userController");
 const { userAuth } = require("../middlewares/auth");
 
 const router = express.Router();
@@ -19,5 +19,7 @@ router.put("/remove-member", userAuth, removeMember);
 router.get("/team", userAuth, getTeam);
 
 router.delete("/logout", userAuth, logoutUser);
+
+router.get("/auth-token", userAuth, checkTokenExpiry);
 
 module.exports = router;

@@ -747,7 +747,7 @@ const deleteTrashedTasks = async function(req, res, next){
         const userId = req.user._id;
         const taskId = req.params.id;
 
-        if(req.user.email === "monkey.ginger@gmail.com"){
+        if(req.user.email === "test.app@flowmate.com"){
             return res.status(404).json({
                 status: false,
                 message: "Test User is not authorized to delete"

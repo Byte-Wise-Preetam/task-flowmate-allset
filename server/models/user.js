@@ -62,7 +62,7 @@ userSchema.methods.matchPassword = async function(enteredPassword){
 }
 
 userSchema.methods.createJWT = async function(){
-    const token = await jwt.sign({userId: this._id}, "yurtgtfthhlj", {expiresIn: "1d"});
+    const token = await jwt.sign({userId: this._id}, "yurtgtfthhlj", {expiresIn: "6h"});
     return token;
 }
 

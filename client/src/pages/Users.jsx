@@ -128,7 +128,7 @@ const Users = () => {
             />
 
             <div className="w-full max-w-[1536px] px-8">
-                <div className="flex flex-row justify-between items-center my-6 mx-auto">
+                <div className="flex flex-col items-start gap-y-4 sm:flex-row sm:justify-between sm:items-center my-6 mx-auto">
                     <div className="text-2xl md:text-3xl font-semibold capitalize">Team Members</div>
                     <button className="flex flex-row items-center justify-center bg-blue-600 sm:text-sm text-base text-white font-medium px-3 py-1.5 sm:px-4 sm:py-2 rounded-md" onClick={() => dispatch(openForm({actionType: "add"}))}>
                         <IoMdAdd className="w-5 h-5 mr-1"/> 

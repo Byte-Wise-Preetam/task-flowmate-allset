@@ -76,8 +76,6 @@ const RegisterUser = () => {
                     <form onSubmit={handleSubmit(handleOnSubmit)} className="w-[90%] sm:w-[475px] px-6 py-4 rounded-lg border border-gray-400">
                         <div className="text-2xl text-gray-800 font-semibold capitalize">Create your account</div>
 
-                        {/* <div className="border-t border-gray-400 my-3"></div> */}
-
                         <div className="my-4 flex flex-col sm:flex-row gap-x-5 gap-y-4">
                             <div className="w-full flex flex-col text-gray-800">
                                 <label htmlFor="firstName" className="text-base mb-1 font-semibold">Firstname</label>

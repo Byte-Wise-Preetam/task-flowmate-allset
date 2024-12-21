@@ -58,28 +58,28 @@ const HomePage = () => {
                     <div style={{backgroundImage: "linear-gradient(90deg,#91eefb,#baec7b)"}} className="welcomeText text-center py-2 font-semibold text-base flex flex-row justify-center items-center mb-4"><span>✨ Welcome to FlowMate — Streamlining Team Collaboration and Boosting Productivity.</span><a href="#features" className="text-blue-700 font-bold flex flex-row items-center ml-2"><span className="mr-2">Explore</span> <FaArrowRightLong/></a></div>
 
                     <div className="max-w-[1280px] mx-auto flex flex-row items-center justify-between pt-4 sm:pt-0 px-4 sm:px-8 rounded-[2rem]"> 
-                        <div className="flex flex-row items-center animate-fade-in-LTR delay-100">
+                        <div className="flex flex-row items-center sm:animate-fade-in-LTR delay-100">
                             <SiOpenhab className="w-6 h-6 sm:w-8 sm:h-8 mr-2 text-blue-600"/>
                             <span className="text-2xl sm:text-3xl font-semibold text-gray-800">FlowMate</span>
                         </div>
-                        <div className="animate-fade-in-RTL delay-100">
+                        <div className="sm:animate-fade-in-RTL delay-100">
                             <Link to="/sign-in" className="text-lg font-semibold hover:text-blue-600">Sign in</Link>
                             <Link to="/register" className="header_btn text-white bg-blue-600 font-semibold px-3 py-1.5 ml-8 rounded-md">Get Started</Link>
                         </div>
                     </div>
                 </header>
 
-                <div className="floatingTags absolute right-0 bg-white py-2 px-4 pr-6 flex flex-row items-center font-semibold shadow-md border border-gray-300 text-gray-800 rounded-md rounded-tr-none rounded-br-none animate-fade-in-RTL"><RxActivityLog className="mr-2 text-blue-600"/>Activity Log</div>
-                <div className="floatingTags absolute -left-8 bottom-[20%] bg-white py-2 px-4 pl-10 flex flex-row items-center font-semibold text-gray-800 shadow-lg rounded-md border border-gray-300 animate-fade-in-LTR"><IoFlowerOutline className="mr-2 text-blue-600"/> <span>Streamlined Workflow</span></div>
+                <div className="floatingTags absolute right-0 bg-white py-2 px-4 pr-6 flex flex-row items-center font-semibold shadow-md border border-gray-300 text-gray-800 rounded-md rounded-tr-none rounded-br-none sm:animate-fade-in-RTL"><RxActivityLog className="mr-2 text-blue-600"/>Activity Log</div>
+                <div className="floatingTags absolute -left-8 bottom-[20%] bg-white py-2 px-4 pl-10 flex flex-row items-center font-semibold text-gray-800 shadow-lg rounded-md border border-gray-300 sm:animate-fade-in-LTR"><IoFlowerOutline className="mr-2 text-blue-600"/> <span>Streamlined Workflow</span></div>
 
                 <div className="hero_content max-w-[350px] sm:max-w-[550px] md:max-w-[695px] lg:max-w-full mx-auto text-center">
-                    <p className="text-sm sm:text-base xl:text-base leading-6 sm:leading-7 text-blue-700 font-bold uppercase animate-fade-in-LTR">Organize your team and tasks seamlessly with real-time activity tracking.</p>
+                    <p className="hero_content_heading_1 text-sm sm:text-base xl:text-base leading-6 sm:leading-7 text-blue-700 font-bold uppercase sm:animate-fade-in-LTR">Organize your team and tasks seamlessly with real-time activity tracking.</p>
 
-                    <h1 className="lg:max-w-[850px] xl:max-w-[975px] mx-auto text-3xl sm:text-5xl md:text-6xl xl:text-7xl leading-[44px] sm:leading-[56px] md:leading-[72px] xl:leading-[85px] font-bold my-6 xl:my-2 text-[#0e1332] animate-fade-in-LTR delay-100">Effortlessly Manage Your <span style={{backgroundImage: "linear-gradient(90deg,#4f57f9,#c9a0ff)", WebkitTextFillColor: "transparent", backgroundClip: "text"}}>Team and Tasks</span> in One Place</h1>
+                    <h1 className="hero_content_heading_2 lg:max-w-[850px] xl:max-w-[975px] mx-auto text-3xl sm:text-5xl md:text-6xl xl:text-7xl leading-[44px] sm:leading-[56px] md:leading-[72px] xl:leading-[85px] font-bold my-6 xl:my-4 text-[#0e1332] sm:animate-fade-in-LTR delay-100">Effortlessly Manage Your <span style={{backgroundImage: "linear-gradient(90deg,#4f57f9,#c9a0ff)", WebkitTextFillColor: "transparent", backgroundClip: "text"}}>Team and Tasks</span> in One Place</h1>
 
-                    <p className="text-[17px] sm:text-xl md:text-2xl md:w-[500px] mx-auto font-semibold text-gray-500 animate-fade-in-LTR delay-100">Collaborate, Assign, Track, and Communicate with your team to boost productivity.</p>
+                    <p className="hero_content_heading_3 sm:text-xl md:text-2xl md:w-[500px] mx-auto font-semibold text-gray-500 sm:animate-fade-in-LTR delay-100">Collaborate, Assign, Track, and Communicate with your team to boost productivity.</p>
 
-                    <div className="my-8 xl:mt-12 animate-fade-in-LTR delay-100">
+                    <div className="my-8 xl:mt-12 sm:animate-fade-in-LTR delay-100">
                         <Link to="/register" className="text-white inline-block items-center bg-blue-600 text-base sm:text-xl font-medium rounded-[2rem] py-2 px-4 hover:scale-105 hover:bg-blue-500 transition-transform duration-300"><div className="flex flex-row items-center"><span>Get Started</span> <FaArrowRightLong className="ml-2 sm:ml-3"/></div></Link>
                         <p className="text-gray-500 font-semibold my-2 text-sm">Free forever. No credit card needed.</p>
                     </div>

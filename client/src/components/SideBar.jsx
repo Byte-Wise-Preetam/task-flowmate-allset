@@ -77,7 +77,7 @@ const SideBar = ({handleOpenSidebar}) => {
     }, [handleOpenSidebar])
 
     return(
-        <div className="sidebar h-[100vh] z-10 lg:z-0" onClick={handleCloseSidebar}>
+        <div className="sidebar h-full sm:h-[100vh] z-20 lg:z-0" onClick={handleCloseSidebar}>
             <div style={{fontFamily: "var(--nunito)"}} id="sidebarContent" className="bg-white flex flex-col justify-between w-[275px] h-full pl-6 pt-20 pb-4 relative">
 
                 <div className="absolute top-4">

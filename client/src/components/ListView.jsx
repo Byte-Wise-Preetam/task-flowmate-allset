@@ -224,12 +224,6 @@ const ListView = ({ tasks }) => {
                                 </div>
                             )}
                             
-                            {/* <button 
-                                className="text-red-700" 
-                                onClick={() => handleMoveToTrash(_id)}
-                            >
-                                Delete
-                            </button> */}
                     </td>
                 )}
             </tr>
@@ -253,6 +247,7 @@ const ListView = ({ tasks }) => {
                             <th className='py-3 sm:py-4 line-clamp-1'>Created At</th>
                             <th className='py-3 sm:py-4'>Assets</th>
                             <th className='py-3 sm:py-4'>Team</th>
+                            <th className="tasks-list__edit-delete min-w-[135px] w-[13%] py-4"></th>
                         </tr>
                     </thead>
 

@@ -134,7 +134,8 @@ const Layout = () => {
                 description="FlowMate's dashboard offers seamless task management and streamlined workflow. Collaborate with your team, track task progress, and boost productivity."
                 keywords="FlowMate, task management, workflow, team collaboration, project tracking, task dashboard, productivity tool, task prioritization"
             />
-            <div style={{fontFamily: "var(--nunito)"}} className="max-w-[1536px] mx-auto w-[100%] flex flex-row">
+
+            <div style={{fontFamily: "var(--nunito)"}} className="max-w-[1536px] mx-auto w-[100%] flex flex-row min-h-screen" >
 
                 {
                     isLoading && <Spinner/>
@@ -144,10 +145,10 @@ const Layout = () => {
 
                 { isSidebarActive && <SideBar handleOpenSidebar={handleOpenSidebar}/>} 
 
-                <div className="bg-[#f3f4f6] max-h-[100vh] dashboard_rightArea">
+                <div className="bg-[#f3f4f6] sm:max-h-[100vh] dashboard_rightArea">
                     {/* Right body header starts here */}
 
-                    <div className="w-full bg-white h-[70px] flex flex-row items-center justify-between px-2 sm:px-8">
+                    <div className=" sticky top-0 w-full bg-white h-[70px] flex flex-row items-center justify-between px-2 sm:px-8 z-10 sm:z-0">
                         <div className="flex flex-row items-center">
                             <button onClick={handleOpenSidebar}><LuMenu className="lg:hidden w-6 h-6 mr-4"/></button>
                             <SearchTasksComponent/>
@@ -157,7 +158,7 @@ const Layout = () => {
                         </div>
                     </div>
 
-                    <div className="overflow-y-scroll" style={{height: "calc(99vh - 70px)"}}>
+                    <div className="dashboardOutlet sm:overflow-y-auto">
                         <Outlet/>
                     </div>
                     

@@ -52,8 +52,6 @@ const LoginUser = () => {
             const data = await res.json();
 
             if (data?.status) {
-                // Set auth token and user data in cookies and sessionStorage
-                // Cookies.set('auth_token', data?.token, { expires: 1 });
 
                 const user = data.user;
 
@@ -125,11 +123,11 @@ const LoginUser = () => {
                     isLoading && <Spinner/>
                 }
 
-                <div className="md:max-w-[750px] lg:max-w-[990px] xl:max-w-[1280px] max-h-[90%] overflow-y-scroll mx-auto  py-4 lg:py-0 flex flex-col gap-y-10 lg:flex-row gap-x-10 justify-start lg:justify-center items-center">
+                <div className="md:max-w-[750px] lg:max-w-[990px] xl:max-w-[1280px] max-h-[90%] overflow-y-scroll mx-auto py-4 lg:py-0 flex flex-col gap-y-10 lg:flex-row gap-x-10 justify-start lg:justify-center items-center">
                     <div className="text-center px-8 lg:px-0">
                         <div className="text-sm font-bold text-blue-600">FUEL YOUR PRODUCTIVITY</div>
 
-                        <div className="max-w-[650px] text-5xl leading-[60px] my-2 font-bold uppercase text-gray-700">Welcome back to <span style={{backgroundImage: "linear-gradient(90deg,#4f57f9,#c9a0ff)", WebkitTextFillColor: "transparent", backgroundClip: "text"}}>FlowMate</span>, let’s get <span style={{backgroundImage: "linear-gradient(90deg,#4f57f9,#c9a0ff)", WebkitTextFillColor: "transparent", backgroundClip: "text"}}>things done!</span></div>
+                        <div className="max-w-[650px] text-4xl xl:text-5xl leading-[45px] xl:leading-[60px] my-2 font-bold uppercase text-gray-800">Welcome back to <span style={{backgroundImage: "linear-gradient(90deg,#4f57f9,#c9a0ff)", WebkitTextFillColor: "transparent", backgroundClip: "text"}}>FlowMate</span>, let’s get <span style={{backgroundImage: "linear-gradient(90deg,#4f57f9,#c9a0ff)", WebkitTextFillColor: "transparent", backgroundClip: "text"}}>things done!</span></div>
                         <div className="max-w-[400px] text-[17px] sm:text-xl md:text-2xl md:w-[500px] mx-auto font-semibold text-gray-500 capitalize">Continue managing tasks and collaborating effortlessly.</div>
 
                         <div className="text-base font-semibold mt-6 lg:mt-12 text-gray-800">
@@ -141,14 +139,12 @@ const LoginUser = () => {
                         </div>
                     </div>
 
-                    <div className="">
+                    <div className="w-full sm:w-auto">
                         <form
                             onSubmit={handleSubmit(handleOnSubmit)}
-                            className="w-[90%] sm:w-[500px] px-4 sm:px-8 py-4 rounded-lg border border-gray-400"
+                            className="w-[90%] sm:w-[475px] px-4 sm:px-8 py-4 mx-auto rounded-lg border border-gray-400"
                         >
                             <div className="text-2xl text-gray-800 font-semibold capitalize">Sign in</div>
-
-                            {/* <div className="border-t border-gray-400 my-3"></div> */}
 
                             <div className="my-4 w-full flex flex-col text-gray-800">
                                 <label htmlFor="email" className="text-base mb-1 font-semibold">

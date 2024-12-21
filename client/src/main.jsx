@@ -4,7 +4,9 @@ import './index.css'
 import App from "./App";
 import LogRocket from 'logrocket';
 
-LogRocket.init('ko7uwn/flowmate');
+if(import.meta.env.VITE_APP_MODE_ON === "production"){
+  LogRocket.init('ko7uwn/flowmate');
+}
 
 createRoot(document.getElementById('root')).render(
 

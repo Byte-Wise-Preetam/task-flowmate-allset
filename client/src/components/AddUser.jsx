@@ -95,7 +95,7 @@ const AddUser = () => {
 
     return(
         <div style={{backgroundColor: "rgba(0, 0, 0, 0.3)"}} className="absolute top-0 left-0 w-full h-[99.9vh] flex flex-row justify-center items-center">
-            <form id="taskForm" onSubmit={handleSubmit(handleOnSubmit)} className="w-[500px] px-8 py-4 rounded-lg bg-white">
+            <form id="taskForm" onSubmit={handleSubmit(handleOnSubmit)} className="w-[90%] sm:w-[475px] px-4 sm:px-8 py-4 rounded-lg bg-white">
                 <div className="text-xl text-black my-4 font-semibold capitalize">{actionType === "add" && "Add New"}{actionType === "edit" && "Edit"} User</div>
 
                 {

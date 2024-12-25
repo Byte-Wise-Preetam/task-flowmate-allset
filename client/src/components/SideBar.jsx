@@ -8,6 +8,7 @@ import { logOut } from "../utils/loginUserSlice";
 import { useCallback } from "react";
 import { SiOpenhab } from "react-icons/si";
 import LogRocket from "logrocket";
+import { startLoading, stopLoading } from "../utils/loaderSlice";
 
 const ICONSTYLE = "h-4 w-4 font-medium mr-3";
 
@@ -50,6 +51,7 @@ const SideBar = ({handleOpenSidebar}) => {
 
     const handleLogoutUser = useCallback(async () => {
         try{
+            dispatch(startLoading({type: "logout", message: "logging out..."}));
             const res = await fetch(`${import.meta.env.VITE_APP_API_BASE_URL}/api/user/logout`, {
                 method: "DELETE",
                 credentials: "include",
@@ -63,6 +65,7 @@ const SideBar = ({handleOpenSidebar}) => {
             }
 
             dispatch(logOut());
+            dispatch(stopLoading());
             navigate("/");
 
         }catch(error){

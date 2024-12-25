@@ -84,22 +84,23 @@ const LoginUser = () => {
 
     const checkAuthentication = useCallback(async () => {
         try{
-
             const storedUser = sessionStorage.getItem('user');
-
-            const authTokenRes = await fetch(`${import.meta.env.VITE_APP_API_BASE_URL}/api/user/auth-token`, {
-                method: "GET",
-                credentials: "include",
-                headers: {
-                    "Content-Type": "application/json"
+            if(storedUser)
+            {
+                const authTokenRes = await fetch(`${import.meta.env.VITE_APP_API_BASE_URL}/api/user/auth-token`, {
+                    method: "GET",
+                    credentials: "include",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                })
+    
+                const authData = await authTokenRes.json();
+    
+                if(authData.status){
+                    dispatch(saveUser(JSON.parse(storedUser)));
+                    navigate('/dashboard/tasks');
                 }
-            })
-
-            const authData = await authTokenRes.json();
-
-            if(storedUser && authData.status){
-                dispatch(saveUser(JSON.parse(storedUser)));
-                navigate('/dashboard/tasks');
             }
         }catch(error){
             import.meta.env.VITE_APP_MODE_ON === "production" ? LogRocket.error("Error: ", error.message || "An unknown error occurred") : console.error("Error: ", error.message || "An unknown error occurred");
